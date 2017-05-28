@@ -1,5 +1,10 @@
-Request1: Not Complete
+Request6: Not Complete
 User:ItsADuck#0354
-Item: tonberry bed x1
-Reward: 1000 Gil
+Item: ingots
+Reward: 1 Gil
+
+Request8:[Completed]
+User:ItsADuck#0354
+Item: fleece
+Reward: 200 Gil
 

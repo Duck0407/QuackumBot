@@ -7,3 +7,5 @@ example: ```#showRequests```
 example: ```#updateRequest 1, Complete```
 #cleanRequests - cleans up and gets rid of **ALL* requests, do not use this unless you want to delete **EVERYTHING**
 example: ```#cleanRequests```
+#deleteRequest - deletes the specified request number if it exists
+example: ```#deleteRequest 2 ``` 

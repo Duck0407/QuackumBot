@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace ConsoleApplication_discordbot
 {
     class Program
@@ -17,7 +18,7 @@ namespace ConsoleApplication_discordbot
             bot.MessageReceived += bot_MessageReceived;
             bot.ExecuteAndWait(async () =>
             {
-                await bot.Connect("SPECIAL CODE HERE", TokenType.Bot);
+                await bot.Connect("MzE4MjIzOTc5NjE1NjE3MDI0.DAvQuA.qvvusMlkG7Zt9MvLQ26AbU5w4Xo", TokenType.Bot);
 
             });
 
@@ -94,7 +95,7 @@ namespace ConsoleApplication_discordbot
 
 
 
-                    string requestNumber = "Request" + args.GetValue(0);
+                    string requestNumber = "Request" + args.GetValue(0) + ":";
 
                     string[] lines = File.ReadAllLines(path);
                     string requestLine = lines.SingleOrDefault(l => l.StartsWith(requestNumber));
@@ -136,6 +137,112 @@ namespace ConsoleApplication_discordbot
                 File.WriteAllText(path, String.Empty);
 
                 e.Channel.SendMessage("**QUACK QUACK! EVERYTHING HAS BEEN ERASED!! REQUESTS CLEANED!**");
+            }
+            else if (e.Message.RawText.StartsWith("#deleteRequest"))
+            {
+                string msg = e.Message.RawText.Replace("#deleteRequest ", "");
+                Array args = msg.Split(' ');
+                if (args.Length < 1)
+                {
+                    e.Channel.SendMessage("Quack? QUACK?");
+                }
+                else
+                {
+                    string fileName = "Records.txt";
+                    string path = System.IO.Path.Combine(Environment.CurrentDirectory, fileName);
+                    string readText = File.ReadAllText(path);
+                    string requestNumber = "Request" + args.GetValue(0);
+
+                    int counter = 0;
+                    string line;
+                    int line_to_start = -1;
+
+                    // Read the file and display it line by line.
+                    System.IO.StreamReader file = new System.IO.StreamReader(path);
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        if (line.Contains(requestNumber))
+                        {
+                            line_to_start = counter;
+                        }
+
+                        counter++;
+                    }
+
+                    file.Close();
+
+                    if (line_to_start == -1)
+                    {
+                        e.Channel.SendMessage("The request is invalid!");
+                    }
+                    else
+                    {
+                        int line_to_delete_till = line_to_start + 4; //theres x lines after to delete
+
+                        List<string> linesList = File.ReadAllLines(path).ToList();
+                        for (int i = line_to_delete_till; i >= line_to_start; i--)
+                        {
+                            linesList.RemoveAt(i);
+                        }
+
+                        File.WriteAllLines((path), linesList.ToArray());
+
+                        e.Channel.SendMessage("The request is deleted!");
+                    }
+                    
+                }
+                
+            }
+            else if (e.Message.RawText.StartsWith("#completeRequest")) //mark this request as complete, its done
+            {
+                string msg = e.Message.RawText.Replace("#completeRequest ", "");
+                Array args = msg.Split(',');
+                if (args.Length < 1)
+                {
+                    e.Channel.SendMessage("Quack? QUACK?");
+                }
+                else
+                {
+                    string fileName = "Records.txt";
+                    string path = System.IO.Path.Combine(Environment.CurrentDirectory, fileName);
+                    string readText = File.ReadAllText(path);
+
+
+
+                    string requestNumber = "Request" + args.GetValue(0) + ":";
+
+                    string[] lines = File.ReadAllLines(path);
+                    string requestLine = lines.SingleOrDefault(l => l.StartsWith(requestNumber));
+
+
+                    readText = readText.Replace(requestLine, requestNumber + ":" + "[Completed]");
+                    File.WriteAllText(path, readText);
+
+                    e.Channel.SendMessage("Request Updated to Complete");
+                }
+            }
+            else if (e.Message.RawText.StartsWith("#showCompletedRequests"))
+            {
+                int counter = 0;
+                string line;
+                string fileName = "Records.txt";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, fileName);
+                // Read the file and display it line by line.
+                System.IO.StreamReader file = new System.IO.StreamReader(path);
+                string lines_all = "";
+                while ((line = file.ReadLine()) != null)
+                {
+                    if (line.Contains("[Completed]"))
+                    {
+                        lines_all = lines_all + line + "\r\n";
+                    }
+
+                    counter++;
+                }
+
+                file.Close();
+                e.Channel.SendMessage("**Here's all the completed request(s):**");
+                e.Channel.SendMessage(lines_all);
             }
 
         }
