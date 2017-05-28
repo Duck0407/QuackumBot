@@ -17,7 +17,7 @@ namespace ConsoleApplication_discordbot
             bot.MessageReceived += bot_MessageReceived;
             bot.ExecuteAndWait(async () =>
             {
-                await bot.Connect("MzE4MjIzOTc5NjE1NjE3MDI0.DAvQuA.qvvusMlkG7Zt9MvLQ26AbU5w4Xo", TokenType.Bot);
+                await bot.Connect("SPECIAL CODE HERE", TokenType.Bot);
 
             });
 
