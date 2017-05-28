@@ -18,4 +18,3 @@ d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleAp
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Release\RestSharp.xml
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Release\ConsoleApplication_discordbot.exe
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Release\ConsoleApplication_discordbot.pdb
-d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Release\ConsoleApplication_discordbot.csprojResolveAssemblyReference.cache

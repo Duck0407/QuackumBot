@@ -1,3 +1,6 @@
+d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Records.txt
+d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Summary.txt
+d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Help.txt
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\ConsoleApplication_discordbot.exe.config
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\ConsoleApplication_discordbot.exe
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\ConsoleApplication_discordbot.pdb
@@ -13,9 +16,5 @@ d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleAp
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Nito.AsyncEx.Concurrent.xml
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\RestSharp.xml
-d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Debug\ConsoleApplication_discordbot.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Debug\ConsoleApplication_discordbot.exe
 d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\obj\Debug\ConsoleApplication_discordbot.pdb
-d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Records.txt
-d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Summary.txt
-d:\documents\visual studio 2015\Projects\ConsoleApplication_discordbot\ConsoleApplication_discordbot\bin\Debug\Help.txt

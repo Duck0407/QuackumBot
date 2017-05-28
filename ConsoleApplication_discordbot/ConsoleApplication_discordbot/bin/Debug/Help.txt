@@ -9,3 +9,7 @@ example: ```#updateRequest 1, Complete```
 example: ```#cleanRequests```
 #deleteRequest - deletes the specified request number if it exists
 example: ```#deleteRequest 2 ``` 
+#completeRequest - mark this request number as completed
+example ```#completeRequest 8 ```
+#showCompletedRequests - show list of request that's been marked as completed
+example ```#showCompletedRequests```
