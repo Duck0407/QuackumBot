@@ -1,0 +1,9 @@
+﻿**Quackum Bot Commands:**
+#request - takes in two params, the item and reward 
+example: ```#request Electrum Ingots x 10, 1000```
+#showRequests - shows the records of requests 
+example: ```#showRequests```
+#updateRequest - takes in two params, the request number and status, update the request assuming this request exists 
+example: ```#updateRequest 1, Complete```
+#cleanRequests - cleans up and gets rid of **ALL* requests, do not use this unless you want to delete **EVERYTHING**
+example: ```#cleanRequests```
